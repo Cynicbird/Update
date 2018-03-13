@@ -2,8 +2,9 @@
 
 namespace App\Controller;
 
-use Symfony\Component\Routing\Annotation\Route;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class SecureController extends Controller
 {
@@ -16,6 +17,19 @@ class SecureController extends Controller
             'controller_name' => 'SecureController',
         ]);
     }
-    
-  
+
+    /**
+     * @Route("/login", name="login")
+     */
+    public function loginAction(){
+        return $this->render("users/security/login.html.twig");
+    }
+
+    /**
+     * @Route("/logout", name="logout")
+     */
+    public function logoutAction(){
+        $data['message'] = 'You logged out successfully';
+        return $this->render("base.html.twig", $data);
+    }
 }

@@ -1,17 +1,29 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     encoders:
-        harsh:
+        Symfony\Component\Security\Core\User\User:
             algorithm: bcrypt
-            cost: 15
+
     providers:
-        in_memory: { memory: ~ }
+        in_memory:
+          memory:
+            users:
+              admin:
+                password: $2y$15$Upl6VblfSgke1DYBTM42vuJcXkgPiFmEkVm5EgfwK7Am2GZ/h0cu.
+                roles: 'ROLE_ADMIN'
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            anonymous: true
+            anonymous: ~
+            pattern: ^/
+            provider: in_memory
+            form_login:
+                login_path: login
+                check_path: login
+            logout: true
+
 
             # activate different ways to authenticate
 
