@@ -29,7 +29,6 @@ class SecureController extends Controller
      * @Route("/logout", name="logout")
      */
     public function logoutAction(){
-        $data['message'] = 'You logged out successfully';
         return $this->render("base.html.twig", $data);
     }
 }

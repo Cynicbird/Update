@@ -28,7 +28,7 @@ class UserType extends AbstractType
                     'label' => 'Repeat Password'
                 ]
             ])
-            ->add('register', SubmitType::class)
+            ->add('Sign Up', SubmitType::class)
         ;
     }
 
