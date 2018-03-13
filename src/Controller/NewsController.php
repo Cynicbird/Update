@@ -7,24 +7,24 @@ use DateTime;
 use SplStack;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Translation\TranslatorInterface;
 use Unirest\Request;
 use Unirest\Request\Body;
 class NewsController extends Controller {
 
     
-   public function IsTheSame(){
-       $ListNews->$this->getNews();
-   }
-    
+/**
+ * @Route("AA")
+ */
+public function index(TranslatorInterface $translator)
+{
 
-    
-    
-    
 
-    public function index(){
-        return $this->render('news/index.html_1.twig');
-    }
-
+     return $this->render('news/index.html.twig');
+}
+    
+    
     public function getDataApi($idurl) {
         $url=$this->getApisname();
         $data = array('author' => 'author');

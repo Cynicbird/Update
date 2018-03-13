@@ -1,12 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello !{% endblock %}
+{% block title %}Hello{% endblock %}
 
 {% block body %}
-    {% set i =0 %}
-   <div id="target">
-  Click here
-</div>
-   <div id="api"><p>{{mesapis.0.url}}</p>
+       <h1>{% trans %}Hello {% endtrans %}</h1>
+   <div id="api"><p></p>
     </div>
 {% endblock %}
