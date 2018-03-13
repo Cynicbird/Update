@@ -1,0 +1,28 @@
+/*---FOOTER---*/
+
+footer{	
+	/*POSITION*/
+	position:absolute;
+	bottom:0;
+	text-align:center;
+	
+	/*SIZE*/
+	width:100%;
+	
+	/*COLORS*/
+	background-color:#111;
+	color:#999;
+}
+
+footer ul, footer ul li{
+	list-style:none;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+footer img{height:20px;}
+
+/*-----*/
+.links{margin:0 100px 0 100px;}
+.links li{margin:0 20px 0 20px;}

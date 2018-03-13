@@ -10,6 +10,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class News
 {
+    
+    
+    
+   
+
+        
+    
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -46,6 +53,11 @@ class News
      */
     private $id_api;
     
+    
+       /**
+     * @ORM\ManyToOne(targetEntity="Category")
+     */
+    private $category;
     
     function getTitle() {
         return $this->title;
@@ -98,4 +110,13 @@ class News
 public function setIdApis(Comment $c) {
         $this->firstComment = $c;
     }
+    
+        function getCategory() {
+        return $this->category;
+    }
+
+    function setCategory($category) {
+        $this->category = $category;
+    }
+
 }

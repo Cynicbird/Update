@@ -29,7 +29,8 @@ class Apis
      * @ORM\Column(type="string", length=25)
      */
     private $type;
-   
+    
+    
     function getName() {
         return $this->name;
     }
@@ -40,7 +41,9 @@ class Apis
 
     function getType() {
         return $this->type;
-    }
+    }    
+ 
+
 
     function setName($name) {
         $this->name = $name;

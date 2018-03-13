@@ -4,19 +4,19 @@
         <body>
                    <trans-unit id="1">
                 <source>Legal notice</source>
-                <target>Notice legal</target>
+                <target>Правна информация</target>
             </trans-unit>
             <trans-unit id="2">
                 <source>About us</source>
-                <target>À propos de nous</target>
+                <target>за нас</target>
             </trans-unit>
 <trans-unit id="3">
                 <source>Terms of use</source>
-                <target>Conditions d'utilisations</target>
+                <target>Условия за ползване</target>
             </trans-unit>
 <trans-unit id="4">
                 <source>Questions</source>
-                <target>Faq</target>
+                <target>въпроси</target>
             </trans-unit>
         </body>
     </file>

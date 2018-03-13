@@ -9,11 +9,32 @@
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}
+        {% block javascripts %} 
  <script src="https://code.jquery.com/jquery-3.1.1.min.js"</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-       <script src="{{asset('build/js/app.js')}}"></script>
-        {% endblock %}
+       <script src="{{asset('build/js/app.js')}}"></script>   {% endblock %}
+         <footer> 
+	<ul class="lang">
+		<li><a <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'fr'})) }}"><img src={{ asset('build/img/lang/france.png')}}/></a></li>
+		<li><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'bg'})) }}"><img src={{ asset('build/img/lang/bulgarie.png')}}/></a></li>
+		<li><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}"><img src={{ asset('build/img/lang/united-kingdom.png')}}/></a></li>
+	</ul>
+
+	<ul class="links">
+		<li><a href="#">   {{ 'Legal notice'|trans }}</a></li>             
+		<li><a href="#">{{'About us'| trans }}</a></li>
+		<li><a href="#">{{'Terms of use' |trans }}</a></li>
+		<li><a href="#">{{'Questions'|trans }}</a></li>
+	</ul>
+	
+	<ul class="sns">
+		<li><a href="#"><img src={{ asset('build/img/male.png')}}/></a></li>
+		<li><a href=""><img src={{ asset('build/img/sns/instagram-logo.png')}}/></a></li>
+		<li><a href="#"><img src={{ asset('build/img/sns/twitter-logo.png')}}/></a></li>
+	</ul>
+</footer>
+     
     </body>
+  
 </html>

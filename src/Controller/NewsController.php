@@ -6,13 +6,18 @@ use App\Entity\News;
 use DateTime;
 use SplStack;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request as Request2;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Translation\TranslatorInterface;
 use Unirest\Request;
 use Unirest\Request\Body;
 class NewsController extends Controller {
 
+
+public function indexe(Request $request)
+{
+    $locale = $request->getLocale();
+}
     
 /**
  * @Route("AA")
@@ -40,12 +45,12 @@ public function index(TranslatorInterface $translator)
     
     
 /**
-     * @Route("/", name="newse")
+     * @Route("  /{_locale}/news", name="newse")
      */
     public function checkData(){   
-     $this->Newnews();
+        
+     //$this->Newnews();
       $news=$this->getNews();
-      dump($news);
     return $this->render('news/index.html_2.twig',['news'=>$news
             ]);     
 
@@ -77,6 +82,28 @@ $urlapi[$i]=$myapis[$i]->getUrl();
 
     }
     
+      
+    public function Country($a) {
+        $g;
+      $repository = $this->getDoctrine()->getRepository(News::class);
+$product = $repository->findOneBy(['title' => $a]);
+if (!$product ){
+$g=false;
+} else {
+    $g=true;
+}
+return $g;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     /**
@@ -88,6 +115,8 @@ $em = $this->getDoctrine()
         ->getManager()
        ->getRepository('App:News');
 $mynews =$em->findAll() ;
+
+
 foreach($mynews as $key => $value){
     $splstack ->push($mynews[$key]);
 }
@@ -112,22 +141,19 @@ $g=false;
 return $g;
 }
     
-      public function ajaxAction(Request $request)
-{
-    $data = $request->request->get('request');
-}
 
  
- /** 
-     * @Route("/ae/", name="ae")
-     */
     public function Newnews(){
-        $j=0;
-     $no = true;
-           $Data= $this->getDataApi(2);
-           $entityManager = $this->getDoctrine()->getManager();
 
+        $Url=$this->getApisname();
+        foreach ($Url as $key =>  $value){
+            $g=$key;
+            $Data= $this->getDataApi($g);
+           
        for($i=0;$i<count($Data['body']['articles']);$i++) {
+
+ $Data= $this->getDataApi($g);
+                       $entityManager = $this->getDoctrine()->getManager();
 $repository = $this->getDoctrine()->getRepository(News::class);
 $product = $repository->findOneBy(['title' => $Data['body']['articles'][$i]['title'] ]);
 if(!$product){
@@ -136,14 +162,14 @@ if(!$product){
          $news->setSummary($Data['body']['articles'][$i]['description']);
            $news->setSrcImageFile($Data['body']['articles'][$i]['urlToImage']);
          $news->setArticleURL($Data['body']['articles'][$i]['url']);
-         
          $piece = preg_split("( T | Z )", $Data['body']['articles'][$i]['publishedAt']);
          $time = new DateTime($piece[0]);
           $news->setReleaseTime($time);
 
                  $entityManager->persist($news);   
  }
-  
+       }
+       
 }
  $entityManager->flush();
     }
