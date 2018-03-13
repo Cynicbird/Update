@@ -2,8 +2,7 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
-use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping AS ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -16,7 +15,7 @@ class User implements UserInterface, \Serializable{
      * @ORM\Column(type="integer")
      */
     private $id;
-        /**
+    /**
      * @ORM\Column(type="string", length=100)
      */
     private $username;
@@ -24,10 +23,13 @@ class User implements UserInterface, \Serializable{
      * @ORM\Column(type="string", length=100)
      */
     private $email;
+
+    private $plainPassword;
+
     /**
      * @ORM\Column(type="string", length=100)
      */
-      private $password;
+    private $password;
 
     function getId() {
         return $this->id;
@@ -56,6 +58,23 @@ class User implements UserInterface, \Serializable{
     function setPassword($password) {
         $this->password = $password;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    /**
+     * @param mixed $plainPassword
+     */
+    public function setPlainPassword($plainPassword): void
+    {
+        $this->plainPassword = $plainPassword;
+    }
+
 
 
     /**
