@@ -11,15 +11,6 @@ use Unirest\Request;
 use Unirest\Request\Body;
 class NewsController extends Controller {
 
-    
-   public function IsTheSame(){
-       $ListNews->$this->getNews();
-   }
-    
-
-    
-    
-    
 
     public function index(){
         return $this->render('news/index.html_1.twig');
@@ -39,8 +30,8 @@ class NewsController extends Controller {
     }
     
     
-/**
-     * @Route("/", name="newse")
+    /**
+     * @Route("/", name="homepage")
      */
     public function checkData(){   
      $this->Newnews();

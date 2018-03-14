@@ -1,8 +1,24 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    locale: 'en'
 
 services:
+    update.authentication.success_handler:
+      class: App\Security\AuthenticationSuccessHandler
+      arguments:
+        - "@security.http_utils"
+        - []
+        - "@session.flash_bag"
+
+    update.authentication_failure_handler:
+       class: App\Security\AuthenticationFailedHandler
+       arguments:
+         - "@http_kernel"
+         - "@security.http_utils"
+         - []
+         - "@logger"
+
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.

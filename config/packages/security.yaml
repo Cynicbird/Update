@@ -1,17 +1,51 @@
 security:
+
+    role_hierarchy:
+        ROLE_ADMIN: [ROLE_USER]
+
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     encoders:
-        harsh:
+        Symfony\Component\Security\Core\User\User:
             algorithm: bcrypt
-            cost: 15
+        App\Entity\User:
+            algorithm: bcrypt
+
     providers:
-        in_memory: { memory: ~ }
+        chain_provider:
+          chain:
+              providers: [ in_memory, db_provider ]
+
+        in_memory:
+          memory:
+            users:
+              admin:
+                password: $2y$15$Upl6VblfSgke1DYBTM42vuJcXkgPiFmEkVm5EgfwK7Am2GZ/h0cu.
+                roles: 'ROLE_ADMIN'
+
+        db_provider:
+          entity:
+            class: App\Entity\User
+            property: username
+
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            anonymous: true
+            remember_me:
+                 secret:   '%kernel.secret%'
+                 lifetime: 604800 # 1 week in seconds
+                 path:     /
+            anonymous: ~
+            pattern: ^/
+            provider: chain_provider
+            form_login:
+                login_path: login
+                check_path: login
+                success_handler: update.authentication.success_handler
+                failure_handler: update.authentication_failure_handler
+            logout: true
+
 
             # activate different ways to authenticate
 
@@ -24,5 +58,7 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/registration_form_submission$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+    #    - { path: ^/profile, roles: ROLE_USER }
