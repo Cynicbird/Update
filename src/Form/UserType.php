@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
@@ -28,6 +29,9 @@ class UserType extends AbstractType
                 'second_options' => [
                     'label' => 'Confirm Password'
                 ]
+            ])
+            ->add('birthdate', DateType::class, [
+                'years' => range(1900, 2018)
             ])
             ->add('Sign Up', SubmitType::class)
         ;
