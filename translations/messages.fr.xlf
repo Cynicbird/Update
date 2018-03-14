@@ -18,6 +18,26 @@
                 <source>Questions</source>
                 <target>Faq</target>
             </trans-unit>
+<trans-unit id="5">
+                <source>International</source>
+                <target>Mondial</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>Politics</source>
+                <target>Politique</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>Society</source>
+                <target>Société</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>Sports</source>
+                <target>Sports</target>
+            </trans-unit>
+             <trans-unit id="9">
+                <source>Culture</source>
+                <target>Culture</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

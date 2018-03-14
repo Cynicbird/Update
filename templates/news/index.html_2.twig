@@ -6,12 +6,11 @@
     <main>
 	<nav>
 		<ul>
-                                                            <li><a href="{{ path('test', {'variable': "International"}) }}">International</a></li>
-			<li><a href="{{ path('test', {'variable': "Politics"}) }}">Politics</a></li>
-			<li><a href="{{ path('test', {'variable': "Society"}) }}">Society</a></li>
-			<li><a href="{{ path('test', {'variable':"Sports"})}}">Sports</a></li>
-			<li><a href="{{ path('test', {'variable':" Sports"}) }}">Culture</a></li>
-		</ul>
+                                                         <li><a href="{{ path('test', {'variable': "International"}) }}">{{ 'International'| trans }}</a></li>
+			<li><a href="{{ path('test', {'variable': "Politics"}) }}">{{ 'Politics'| trans }}</a></li>
+			<li><a href="{{ path('test', {'variable': "Society"}) }}">{{ 'Society'| trans }}</a></li>
+			<li><a href="{{ path('test', {'variable':  "Sports"})}}">{{ 'Sports'|trans }}</a></li>
+			<li><a href="{{ path('test', {'variable':" Sports"}) }}">{{ 'Culture'|trans }}</a></li>
 	</nav>
            <article>
 	<section>

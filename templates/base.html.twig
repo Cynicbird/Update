@@ -12,8 +12,8 @@
 	<section>
 		<img src={{ asset('build/img/logo3.png')}}/>
 		<ul>
-			<li><a href="#"><img src={{ asset('build/img/female.png')}}><br/>Name of the user</a></li>
-			<li><a href="#"><img src={{ asset('build/img/header/add.png')}}/><br/>Add news</a></li>
+			<li><a href="#"><img src={{ asset('build/img/female.png')}}><br/>{{ 'Name of the user'| trans }}</a></li>
+			<li><a href="#"><img src={{ asset('build/img/header/add.png')}}/><br/>{{ 'Add news' | trans }}</a></li>
 			<li><a href="{{path("homepage")}}"><img src={{ asset('build/img/header/back-arrow.png')}}/><br/>Return</a></li>
 		</ul>
 	</section>
@@ -22,6 +22,11 @@
         {% block body %}{% endblock %}
         
 
+        {% block javascripts %} 
+ <script src="https://code.jquery.com/jquery-3.1.1.min.js"</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       <script src="{{asset('build/js/app.js')}}"></script>   {% endblock %}
 
 
        
@@ -45,12 +50,7 @@
 		<li><a href="#"><img src={{ asset('build/img/sns/twitter-logo.png')}}/></a></li>
 	</ul>
 </footer>
-             {% block javascripts %} 
- <script src="https://code.jquery.com/jquery-3.1.1.min.js"</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-       <script src="{{asset('build/js/app.js')}}"></script>   {% endblock %}
-
+     
     </body>
   
 </html>

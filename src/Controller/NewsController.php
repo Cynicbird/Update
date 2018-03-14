@@ -25,15 +25,7 @@ public function indexe()
 
 }
     
-/**
- * @Route("AA")
- */
-public function index(TranslatorInterface $translator)
-{
 
-
-     return $this->render('news/index.html.twig');
-}
     
     
     public function getDataApi($idurl) {

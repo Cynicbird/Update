@@ -25,16 +25,24 @@ aside div{
 	margin-bottom:20px;
 }
 
-/*-----ARTICLE-----*/
+/*-----ARTICLES-----*/
+aside a{color:black;}
 aside article{
 	margin:10px 15px;
 	text-align:left;
-	
-	border:1px solid blue;
+	position:relative;
+}
+aside p, aside img{
+	display:inline-block;
+	vertical-align:top;
 }
 
 aside article img{
-	height:50px;
-	vertical-align:top;
-	margin-right:10px;
+	max-width:55%;
+}
+aside article p{
+	padding:0; margin:0;
+	float:right;
+	max-width:40%;
+	/*max-height:??? + overflow ?*/
 }
