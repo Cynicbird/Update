@@ -29,7 +29,12 @@ class Apis
      * @ORM\Column(type="string", length=25)
      */
     private $type;
-   
+    
+           /**
+     * @ORM\ManyToOne(targetEntity="News")
+     */
+    private $news;
+    
     function getName() {
         return $this->name;
     }
@@ -40,7 +45,9 @@ class Apis
 
     function getType() {
         return $this->type;
-    }
+    }    
+ 
+
 
     function setName($name) {
         $this->name = $name;

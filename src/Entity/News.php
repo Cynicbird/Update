@@ -10,6 +10,13 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class News
 {
+    
+    
+    
+   
+
+        
+    
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -22,8 +29,8 @@ class News
      */
     private $title;
     
-    /**
-     * @ORM\Column(type="string", length=500, nullable=true)
+          /**
+     * @ORM\Column(type="string", nullable=true)
      */
     private $summary;
     
@@ -37,7 +44,7 @@ class News
      */
     private $articleURL;
     /**
-     *@ORM\Column(type="datetime")
+     *@ORM\Column(type="datetime", nullable=true) 
      */
     private $releaseTime;
     
@@ -47,6 +54,27 @@ class News
     private $id_api;
     
     
+       /**
+     * @ORM\ManyToOne(targetEntity="Category")
+     */
+    private $category;
+    
+    /**
+     * 
+     * @ORM\OneToMany(targetEntity="Comments", mappedBy="news")
+     */
+
+        private $comment;
+    
+        
+    function getComment() {
+        return $this->comment;
+    }
+
+    function setComment($comment) {
+        $this->comment = $comment;
+    }    
+        
     function getTitle() {
         return $this->title;
     }
@@ -98,4 +126,13 @@ class News
 public function setIdApis(Comment $c) {
         $this->firstComment = $c;
     }
+    
+        function getCategory() {
+        return $this->category;
+    }
+
+    function setCategory($category) {
+        $this->category = $category;
+    }
+
 }

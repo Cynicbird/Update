@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+                   <trans-unit id="1">
+                <source>Legal notice</source>
+                <target>Notice legal</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>About us</source>
+                <target>À propos de nous</target>
+            </trans-unit>
+<trans-unit id="3">
+                <source>Terms of use</source>
+                <target>Conditions d'utilisations</target>
+            </trans-unit>
+<trans-unit id="4">
+                <source>Questions</source>
+                <target>Faq</target>
+            </trans-unit>
+<trans-unit id="5">
+                <source>International</source>
+                <target>Mondial</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>Politics</source>
+                <target>Politique</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>Society</source>
+                <target>Société</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>Sports</source>
+                <target>Sports</target>
+            </trans-unit>
+             <trans-unit id="9">
+                <source>Culture</source>
+                <target>Culture</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
+

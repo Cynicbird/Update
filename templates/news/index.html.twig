@@ -1,12 +1,206 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello !{% endblock %}
+{% block title %}Hello{% endblock %}
 
 {% block body %}
-    {% set i =0 %}
-   <div id="target">
-  Click here
-</div>
-   <div id="api"><p>{{mesapis.0.url}}</p>
-    </div>
+       <h1>{% trans %}Hello{% endtrans %}</h1>
+     {% trans %}  <p>Mentions légales
+Mentions légales
+I – Informations légales :
+Informations Éditeur
+Update
+Société anonyme au capital de 1000 euros
+Siège social : 1 rue de Chablis
+93330 Bobigny
+France
+Directeur de la publication : Morgan POMMIER
+Contact par courrier électronique : Formulaire de contact : http://www.helloworl.com/fr/
+
+Informations Hébergeurs
+//////////////////////////////////////////////////////
+
+II – Conditions Générales d’Utilisation :
+Objet :
+Les présentes conditions générales d’utilisation (ci-après dénommées « CGU ») ont pour objet de définir et de fixer les modalités dans lesquelles Update met à votre disposition le site Internet de sa plateforme Hello World, accessible à l’adresse wwwhelloworld.com (ci-après dénommé le « Site »), ainsi que les conditions dans lesquelles vous accédez et consultez le Site.
+
+Définitions :
+Pour les besoins des présentes CGU :
+« Conditions Générales d'Utilisation » ou « CGU » : renvoient aux dispositions prévues aux présentes, acceptées par les Utilisateurs, régissant l’accès et l’utilisation du Site.
+« Commentaire(s) » : renvoie(nt) au(x) texte(s) que l’Utilisateur rédige afin de commenter les Contenus (cf. définition ci-dessous). Les Commentaires des Utilisateurs seront visibles par tout internaute se rendant sur le Site.
+« Compte Utilisateur » : renvoie à l’espace réservé à l'Utilisateur sur le Site par le biais d’un identifiant et d’un mot de passe, et lui permettant de recevoir des newsletters.
+« Contenus » : renvoient de manière large aux contenus et éléments présents sur le Site, notamment photographies, images, textes, articles, illustrations, sons, vidéos ainsi que le Player-Vidéo et le Player-Audio (cf. définitions ci-dessous).
+« Contenus Utilisateurs » : renvoient aux textes, illustrations, photos, images, sons, vidéos, de quelque nature que ce soit, mis à disposition par les Utilisateurs dans le cadre des Espaces Contributifs.
+« Espaces Contributifs » : renvoient à toutes les pages mises à disposition des Utilisateurs sur le Site permettant à ces derniers de commenter les Contenus.
+« Player-Vidéo » : désigne le logiciel permettant la lecture des Contenus vidéo. Le Player-Vidéo est exportable, et permet aux tiers préalablement autorisés par contrat d’afficher lesdits Contenus sur leurs sites dans les conditions définies aux présentes CGU. Il s’agit du Player-vidéo YouTube utilisé par Update
+« Player-Audio » : désigne le logiciel permettant la lecture des Contenus audio. Le Player-Audio est exportable, et permet aux tiers préalablement autorisés par contrat d’afficher lesdits Contenus sur leurs sites dans les conditions définies aux présentes CGU.
+« Services » : renvoient aux services accessibles sur et/ou depuis le Site et édités par Update
+« Services Partenaires » : renvoient aux services édités par des tiers partenaires accessibles sur et/ou depuis le Site, par le biais notamment de liens hypertextes placés dans différentes rubriques.
+« Site » : renvoie au site de Update accessible à l’adresse www.helloworld.com, ainsi qu’à l’ensemble de ses déclinaisons quel que soit le mode d’accessibilité (notamment site mobile et applications).
+Acceptation des CGU :
+
+Toute utilisation du Site et/ou de toute application mobile et/ou tablette éditée et distribuée par Update pour sa chaîne Update (ci-après dénommés le(s) « Service(s) ») s’effectue dans le cadre des présentes CGU qui ont vocation à fixer les modalités d’utilisation des Services et Contenus proposés sur le Site.
+Tout accès au Site implique l’application et l’acceptation des présentes CGU. Les CGU applicables sont celles en vigueur à la date de chaque connexion de l’Utilisateur au Site. Il est précisé que Update peut à tout moment faire évoluer les CGU afin de les adapter aux évolutions du Service et de la législation en vigueur. Ces modifications sont portées à la connaissance des Utilisateurs du simple fait de leur mise en ligne. Dès lors, elles sont réputées acceptées sans réserve par tout Utilisateur accédant au Site postérieurement à leurs mises en ligne. Par conséquent, l’Utilisateur est invité à s’y référer lors de chaque visite afin de prendre connaissance de leur dernière version disponible sur le Site.
+Services Partenaires :
+
+Le Site permet également d’accéder à des Services Partenaires, par le biais de liens hypertextes intégrés dans différentes rubriques du Site renvoyant aux sites, contenus et services édités par lesdits partenaires. Les Services Partenaires peuvent notamment être accessibles via des éléments publicitaires (type bannières, vidéos…) à cliquer.
+L’Utilisateur reconnaît que ces Services Partenaires sont totalement indépendants de Update. Dès lors, toute utilisation des Services Partenaires via le Site sera soumise exclusivement aux conditions d’utilisation et/ou de vente propres à chaque Service Partenaire ainsi qu’à leur politique de protection des données à caractère personnel.
+La responsabilité de Update ne saurait être recherchée du fait du contenu accessible, de l’ensemble des offres, informations consultées ou transactions réalisées sur les Services Partenaires. De même Update n’offre aucune garantie quant au respect de la réglementation en vigueur par les éditeurs des Services Partenaires, qui en sont seuls responsables.
+Utilisateurs
+5.1 Comptes Utilisateurs
+L'accès au Site est gratuit et n'est pas soumis à une inscription préalable.
+Néanmoins, certains services proposés sur le Site (comme l’envoi de newsletters) peuvent être soumis à une inscription préalable de l’Utilisateur, son identification et l’utilisation d’un Compte Utilisateur.
+Lors de la création de son Compte Utilisateur, l’Utilisateur sera amené à choisir son identifiant personnel et un mot de passe associé, qui sont strictement personnels et confidentiels. Un formulaire d’inscription sera soumis à l’Utilisateur afin qu’il communique à Update certaines informations à caractère personnel obligatoires ou facultatives selon les mentions figurant sur le formulaire. A défaut de communication par l’Utilisateur des informations mentionnées comme obligatoires, la validation de la création du Compte Utilisateur ne pourra avoir lieu.
+Ces données personnelles sont collectées et conservées avec le consentement de l’Utilisateur et feront l’objet d’un traitement tel que défini à l’article 10 des présentes CGU.
+
+
+5.1.1 Protection des mineurs
+Dans l'hypothèse où l’Utilisateur est une personne physique mineure, il déclare et reconnaît avoir recueilli l'autorisation préalable de ses parents ou du (des) titulaire(s) de l'autorité parentale le concernant pour naviguer sur le Site. Le(s) titulaire(s) de l'autorité parentale a (ont) accepté d'être garant(s) du respect de l'ensemble des dispositions des présentes CGU lors de l’utilisation du Site par l’Utilisateur mineur.
+Les parents (ou titulaires de l'autorité parentale) sont invités à surveiller l'Utilisation faite par leurs enfants du Service et à garder présent à l'esprit que le Service est destiné à toucher un large public et qu'en leur qualité de tuteur légal, il est de la responsabilité des parents de déterminer quel site Web est ou non approprié pour leur(s) enfant(s) et de surveiller l'utilisation qu'ils en font. Pour plus d’informations sur le filtrage, notamment en vue de la protection des mineurs, Update recommande aux parents de se rapprocher de leur fournisseur d’accès à Internet et de consulter la page suivante : http://www.education.gouv.fr/cid141/la-protection-des-mineurs-sur-internet.html
+Il est précisé que les mineurs âgés de moins 16 ans ne sont pas autorisés à créer un Compte Utilisateur.
+
+5.1.2 Identifiants de services tiers
+L’accès à certaines fonctionnalités ou services peut être conditionné à l’utilisation d’identifiants de services tiers tels que Facebook, Twitter, Google +, LinkedIn.
+Une connexion de l’Utilisateur avec les identifiants propres à ces différents services tiers sera nécessaire pour toutes les fonctionnalités communautaires impliquant une interaction avec lesdits services tiers.
+La création et l’utilisation de ces comptes et les données à caractère personnel communiquées par l’Utilisateur auprès de ces services tiers sont régies par les conditions d’utilisation et la politique de protection des données à caractère personnel propres à chaque service tiers, excluant toute responsabilité d'Update à ce titre.
+
+5.2 Espaces Contributifs
+5.2.1 Les Utilisateurs ont la possibilité de commenter les Contenus mis en ligne sur le Site (ci-après « les Commentaires »), et/ou mettre en ligne des textes, vidéos, sons, images et/ou photographies (ci-après les « Contenus Utilisateurs »). Ces Commentaires et Contenus Utilisateurs sont visualisables par tout internaute se rendant sur le Site.
+Update n’effectue aucun contrôle a priori des Contenus Utilisateurs et/ou Commentaires mis en ligne par les Utilisateurs, qui restent ainsi responsable de la teneur des Commentaires et/ou Contenus Utilisateurs dont ils sont auteurs.
+En aucun cas, la responsabilité de Update ne pourra être engagée sur le fondement de Commentaires et/ou Contenus Utilisateurs qui auraient été mis en ligne par un Utilisateur, non détenteur des droits nécessaires à une telle mise en ligne.
+Tout Utilisateur qui met en ligne des Commentaires et/ou Contenus Utilisateurs sur le Site autorise expressément Update, à titre gratuit et non exclusif, à conserver, reproduire et représenter lesdits Commentaires et/ou Contenus Utilisateurs pour toute la durée des droits de propriété intellectuelle à compter de leur publication.
+Il est précisé que pour des raisons techniques, certains Contenus Utilisateurs pourront être reformatés conformément aux dispositions de l’article 7.3 des présentes CGU (notamment police, taille, orthographe). Aucune modification de fond ne sera apportée aux Commentaires et/ou Contenus Utilisateur, sans l’accord préalable exprès et écrit de l’Utilisateur auteur dudit Contenu Utilisateur.
+
+5.2.2 L’Utilisateur s’engage à ne pas mettre en ligne sur le Site des Contenus Utilisateurs et Commentaires qui ne seraient pas conformes à la législation en vigueur en France, et notamment qui :
+- seraient contraires à l’ordre public et aux bonnes mœurs ;
+- porteraient atteinte à la vie privée d’autrui ;
+- constitueraient une atteinte au secret des sources des journalistes ;
+- violeraient le secret professionnel ;
+- feraient allusion à l’origine raciale, religieuse, ethnique, aux caractéristiques physiques, au handicap d’un individu, à moins que ces mentions ne soient pertinentes pour la compréhension de l’information ;
+- contribueraient à la diffusion d’une œuvre protégée par le Code de la Propriété Intellectuelle sans disposer des autorisations préalables nécessaires ;
+- constitueraient une injure, une diffamation, un dénigrement, une atteinte à l’honneur et à la réputation, à la dignité de la personne, une incitation à la haine raciale, un acte de concurrence déloyale ;
+- constitueraient une atteinte à la dignité d’une victime ;
+- porteraient atteinte à l’identité des victimes d’agressions ou d’atteintes sexuelles, sauf si la personne a donné son accord écrit ;
+- permettraient la diffusion d’informations relatives à l’identité ou permettant l’identification d’un mineur ;
+- encourageraient la commission de crimes et/ou délits incitant à la consommation de substances interdites ou incitant au suicide ;
+- feraient l’apologie de certains crimes, notamment meurtre, viol, crimes de guerre et crimes contre l’humanité ;
+- auraient un caractère raciste, antisémite, xénophobe, révisionniste, obscène ou pornographique, pédophile.
+Par ailleurs, les Utilisateurs s’engagent à rédiger des Commentaires et/ou Contenus Utilisateurs qui :
+- sont pertinents et en lien avec le sujet commenté ou concerné ;
+- sont lisibles et compréhensibles par tous, en évitant d’abuser des abréviations ou du « langage SMS » ;
+- évitent l’utilisation abusive de majuscules qui pourrait être ressentie comme agressive ;
+- ne constituent pas des spams, ni des « flood » (poster le même message à plusieurs reprises).
+
+5.3 Modération des Espaces Contributifs
+Update peut, à sa seule discrétion, décider de supprimer tout Commentaire et/ou Contenu Utilisateur après sa mise en ligne sur le Site, dans l’hypothèse où ledit Commentaire et/ou Contenu Utilisateur ne respecterait pas les dispositions de l’article 5.2.2, et plus généralement contreviendrait aux dispositions de la législation française en vigueur.
+
+Propriété Intellectuelle :
+6.1 Eléments du Site et Contenus
+Les éléments contenus sur le Site tels que notamment les textes, sons, images, vidéos, musique, logiciels, bases de données, logos, marques et autres éléments reproduits, sont réservés et protégés par le droit de la propriété intellectuelle (notamment droit d’auteur, droits voisins, droit des marques). Ces éléments protégés sont la propriété de Update et/ou de ses partenaires.
+En vertu des règles relatives à la propriété intellectuelle, toute reproduction (y compris par téléchargement, impression etc.) ou représentation partielle ou intégrale, adaptation, traduction, transformation et/ou transfert vers un autre site d'un ou de plusieurs des éléments précités est interdite sans l'autorisation préalable et écrite de Update et/ou des titulaires des droits. Toute utilisation non autorisée de l’un de ces éléments constitue un délit de contrefaçon et peut donner lieu à des poursuites judiciaires civiles et/ou pénales et au paiement de dommages et intérêts.
+Update accorde à l’Utilisateur l’autorisation incessible, gratuite, non exclusive, personnelle et privée d’utiliser les Services et le Site pour un usage uniquement personnel et privé, et dans le strict respect des conditions d'utilisation établies par les présentes CGU.
+6.2 Marques
+Les marques de Update et de ses partenaires, y compris les logos figurant sur le Site sont des marques déposées et protégées à ce titre par le droit de la propriété industrielle (article L 713-2 du Code de la Propriété Intellectuelle et suivants). Sauf autorisation expresse et préalable de leurs propriétaires, l'utilisation de ces marques ou logos est prohibée. Toute utilisation non autorisée d'une marque ou d'un logo protégé constitue un délit de contrefaçon et peut être poursuivi devant les autorités judiciaires.
+
+6.3 Contributions des Utilisateurs
+Chaque Utilisateur garantit à Update qu’il dispose des droits d’utilisation nécessaires à la mise en ligne des Commentaires et/ou Contenus utilisateurs sur le Site.
+A ce titre, tout Utilisateur cède à Update, à titre gracieux et non exclusif, pour toute la durée de protection légale des droits de propriété intellectuelle portant éventuellement sur ses Commentaires et/ou Contenus utilisateurs, le droit de reproduire, représenter, copier, modifier, reformater, rééditer, communiquer, distribuer, adapter et plus généralement d'exploiter tout ou partie des Commentaires et/ou Contenus Utilisateurs sur le Site, ainsi que sur ses déclinaisons quel que soit le mode d’accessibilité.
+Ces droits sont cédés pour le monde entier pour toutes exploitations sur tous supports et par tous procédés de diffusion connus ou inconnus à ce jour.
+Dans le cadre de l’application de l’article 5.2.1, par lequel l’Utilisateur reconnaît et accepte expressément que certains Commentaires et/ou Contenus Utilisateurs pourront être reformatés pour des besoins exclusivement techniques, l’Utilisateur cède ainsi les droits d’adaptation nécessaires. Aucune modification tenant au fond ne sera apportée aux Commentaires et/ou Contenus Utilisateurs sans l’accord préalable et exprès de l’Utilisateur.
+L’Utilisateur reconnaît et accepte expressément qu’aucune exploitation des Commentaires et/ou Contenus Utilisateurs par Update, dans le cadre des présentes ne pourra donner lieu à une quelconque compensation financière.
+Liens hypertextes
+7.1 Liens hypertextes simples
+Le lien hypertexte simple se définit comme un lien donnant seulement accès à la page d'accueil du Site.
+A l'exception des cas où le lien simple vient d’un site Internet diffusant des informations et/ou contenus ayant un caractère illégal et/ ou à caractère politique, religieux, pornographique ou xénophobe, il est possible de créer un lien simple d'un site licite.
+7.2 Liens hypertextes profonds et Player
+Le lien hypertexte profond se définit comme un lien donnant accès à une page précise du Site sans passer par sa page d'accueil.
+Le Player-Vidéo et/ou Player-audio embarqué sur un site tiers permet d'accéder à un Contenu vidéo et/ou audio du Site en le faisant apparaître dans un cadre dudit site tiers, ou en donnant un accès direct à un ou plusieurs Contenu(s).
+Tout établissement de lien hypertexte profond ainsi que tout Player-Vidéo et/ou Player-Audio embarqué sont interdits à moins que Update ne l’ait préalablement autorisé expressément par contrat.
+
+
+7.3 Liens hypertextes depuis le Site
+Des liens hypertextes contenus sur le Site peuvent renvoyer vers d'autres sites tiers. La visite de l’Utilisateur sur ces sites tiers s'effectue sous sa seule responsabilité. Update ne peut être tenue pour responsable d’avoir proposé à l’Utilisateur ce lien hypertexte et des contenus figurant sur ces sites tiers. L’Utilisateur ne peut en aucun cas engager la responsabilité de Update pour des dommages directs ou indirects subis du fait de l'utilisation d'un site tiers accessible à partir du Site.
+
+Recommandation particulière aux Utilisateurs internationaux
+Update permet l’accès au Site depuis tout pays, sous réserve de la législation locale en vigueur et des éventuelles restrictions applicables qu’elle impose. Tout Utilisateur accédant au Site depuis un poste informatique situé hors du territoire français reconnaît expressément avoir pris connaissance, compris et accepté sans réserve les termes des présentes CGU générales et s’engage à respecter la législation locale et toutes les restrictions applicables au pays concerné.
+Certains Contenus présents sur le Site ne sont pas accessibles depuis certains pays, en raison notamment des restrictions territoriales imposées par les ayants droit ou de droits de diffusion limités. En conséquence, les Utilisateurs qui accèdent au Site depuis des postes informatiques situés sur ces territoires exclus s'interdisent d'utiliser tout système de contournement des mesures de localisation destiné à permettre un accès à ces contenus depuis ces territoires.
+
+Responsabilité
+9.1 Accessibilité du Site et des Services
+Le Site et les Services sont accessibles 24 heures sur 24 et 7 jours sur 7. Update fera ses meilleurs efforts pour garantir l’accessibilité du Site et des Services. Toutefois, Update ne pourra voir sa responsabilité engagée en raison de risques d’interruption ou de dysfonctionnement liés à la connexion, à une opération de maintenance, à une mise à jour éditoriale, à l’encombrement des réseaux et/ou des systèmes informatiques, à l’intrusion de tiers non autorisés et à la contamination par d’éventuels virus circulant sur lesdits réseaux et services, à une grève interne ou externe, à une mauvaise configuration ou utilisation de l’ordinateur de l’Utilisateur ou à toute autre cause dépendant ou non de sa volonté.
+Update ne sera pas tenue responsable au cas où l’interruption ou l’altération de la qualité du Site et des Services serait due à la survenance d’un cas de force majeure. Est considéré comme un cas de force majeure, tout événement de force majeure ou cas fortuit, tels que définis par la législation française en vigueur et la jurisprudence de la Cour de Cassation.
+9.2 Contenu éditorial
+Update s’engage à faire tout son possible pour garantir la véracité et l’exactitude des informations disponibles sur l’ensemble du Site mais ne saurait être tenue responsable de l’inexactitude de celles-ci, ni de l’utilisation ou de l’interprétation qui en est faite par les Utilisateurs.
+Aussi, la responsabilité de Update ne saurait être retenue en raison d'un dommage direct ou indirect, incident ou accessoire, résultant de l'utilisation du Site ou d'une quelconque information obtenue sur le Site. Update se réserve à tout moment et sans préavis le droit d'apporter des améliorations et/ou des modifications sur le Site et ses Services. De manière générale, l’Utilisateur garantit Update contre tout recours ou action, de toute personne, et leurs conséquences pécuniaires éventuelles, fondé(e) sur ou résultant directement ou indirectement de ses agissements, ou découlant de l’utilisation par l’Utilisateur du Site ainsi que de toute violation supposée des CGU ou des dispositions réglementaires en vigueur et tient Update quittes et indemnes de tout recours y compris contentieux qui pourrait en résulter.
+Politique de confidentialité
+10.1 Données personnelles
+Conformément aux dispositions de la loi n°78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, le Site a été déclaré auprès de la Commission nationale de l'informatique et des libertés.
+Update effectue des traitements des données à caractère personnel collectées auprès des Utilisateurs sur le Site dans le cadre de l’utilisation du Site pour :
+1) la création de Compte Utilisateur : les données personnelles recueillies à cette occasion sont nécessaires à l’envoie, de newsletters et alertes information par Update aux Utilisateurs intéressés.
+2) La rubrique « Contactez-nous » : les données personnelles recueillies à cette occasion sont nécessaires d’une part, à l’utilisation et la navigation sur le Site et d’autre part, pour travailler et/ou entrer en relations commerciales avec FMM (Update).
+
+Les données à caractère personnel collectées dans ce cadre sont les suivantes :
+- Nom, prénom ;
+- Adresse mail ;
+- Numéro de téléphone ;
+- Pays ;
+- Langue ;
+- Adresse IP ;
+- Navigateur et version ;
+- Operateur du téléphone
+- Identifiant publicitaire mobile (IDFA/GAID) ;
+- Photo de profil ;
+- CV.
+La finalité des traitements de données à caractère personnel est la suivante :
+Créer et gérer le Compte Utilisateur.
+Personnaliser l’expérience utilisateurs éditoriale et/ou publicitaire sur nos environnements.
+Permettre à l’Utilisateur de recevoir des newsletters, des informations et alertes (push).
+Répondre aux demandes de l’Utilisateur.
+Etablir des statistiques sur la fréquentation des différentes rubriques de la Plateforme numérique.
+Permettre aux Utilisateurs de contribuer au Site par la publication de Commentaires et/ou Contenus Utilisateurs.
+Permettre l’identification des Utilisateurs en cas d’utilisations abusives du Site concernant la publication de Commentaires et/ou Contenus Utilisateurs.
+
+Lors de la création ou de la gestion de son Compte Utilisateur, l’Utilisateur peut choisir de s’abonner aux newsletters du Site. L’Utilisateur peut se désabonner à tout moment en cliquant sur le lien prévu à cet effet dans les emails qui lui sont envoyés dans ce cadre.
+Conformément à la loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, l’Utilisateur dispose des droits suivants :
+du droit de s’opposer, pour des motifs légitimes, à ce que les données personnelles le concernant fassent l’objet d’un traitement ;
+du droit d’accéder à ses données personnelles faisant l’objet d’un traitement ;
+du droit de demander que ses données soient rectifiées, complétées, mises à jour, verrouillées ou effacées lorsqu’elles sont inexactes, incomplètes, équivoques ou périmées, ou dont la collecte, l’utilisation, la communication ou la conservation est interdite.
+Ces demandes doivent être adressées par le biais du formulaire « Contactez-nous / J’ai une autre question ou remarque » prévu à cet effet sur le Site.
+Si des modifications sont apportées aux règles de traitement des données, l’Utilisateur ayant créé un Compte Utilisateur en sera informé et son consentement sera demandé.
+10.2 Cookies
+
+10.2.1 L’Utilisateur est informé que, lors de ses visites sur le Site, des cookies peuvent être installés automatiquement sur son logiciel de navigation. Un cookie est un fichier, souvent anonyme, contenant des données, notamment un identifiant unique, transmis par le serveur du Site au navigateur de l’Utilisateur et stocké sur son disque dur. Ces cookies permettent lors de chaque visite par un Utilisateur sur le Site, de réaliser des études statistiques globales sur l’audience du Site, d’identifier le cas échéant l’Utilisateur, d’étudier le comportement des Utilisateurs au sein des différentes rubriques du Site et ce, afin d’améliorer notamment l’organisation du Site et des Services ainsi que la navigation des Utilisateurs.
+Les cookies eux – mêmes ne permettent pas d’identifier un Utilisateur, mais uniquement l’ordinateur qu’il utilise. Les cookies identifient les pages du Site que l’Utilisateur de l’ordinateur a visité, ainsi que la durée de consultation de celles-ci.
+
+10.2.2 L'Utilisateur est libre de s’opposer au dépôt des cookies en configurant son navigateur via ses paramètres (article 10.2.4) ; cependant en refusant l’installation des cookies, certaines fonctionnalités du Site ne pourront pas être proposées.
+10.2.3 Il convient de distinguer deux types de cookies :
+- les cookies Update : il s’agit des cookies déposés par Update sur le logiciel de navigation de l’ordinateur pour répondre aux besoins de navigation, d’optimisation et de personnalisation des Services du Site par les Utilisateurs : cookies analytics (@ Internet) ; cookies techniques utiles au Site pour fonctionner (Enseighten) et cookies de personnalisation de la navigation.
+- les cookies publicitaires : Il s'agit des cookies utilisés pour présenter aux Utilisateurs des publicités et/ou adresser des informations adaptées à leurs centres d'intérêts sur le Site lors de la navigation. Ils sont notamment utilisés pour la gestion des publicités et/ou informations.
+Le refus de ces cookies publicitaires n'a pas d'impact sur l'utilisation du Site. Le fait de refuser les cookies publicitaires n'entraînera pas l'arrêt de la publicité sur le Site mais aura pour effet d'afficher une publicité qui ne tiendra pas compte des centres d'intérêt, de la géolocalisation ou des préférences des Utilisateurs.
+Ces cookies publicitaires sont principalement des cookies tiers qui émanent des régies publicitaires et/ou de partenaires (ex. : Google, Teads, Outbrain, Facebook etc.), et qui à ce titre ne peuvent pas être contrôlés de manière exhaustive par Update.
+
+10.2.4 L’Utilisateur peut à tout moment décider de désinstaller ces cookies. Le navigateur peut également être paramétré afin de signaler l’installation de nouveaux cookies à laquelle l’Utilisateur peut décider de s’opposer ou non.
+L’Utilisateur peut accepter ou refuser les cookies, soit de manière individuelle, soit de manière systématique.
+L’Utilisateur peut gérer, désactiver ou autoriser les cookies en modifiant les paramètres de son navigateur Internet de la manière suivante :
+
+Edge / Internet Explorer
+Dans Edge ou Internet Explorer, cliquez sur le bouton Outils, puis sur Options Internet.
+Sous l'onglet Général, sous Historique de navigation, cliquez sur Paramètres.
+Cliquez sur le bouton Afficher les fichiers.
+Firefox
+Allez dans l'onglet Outils du navigateur puis sélectionnez le menu Options.
+Dans la fenêtre qui s'affiche, choisissez Vie privée et cliquez sur Affichez les cookies.
+Safari
+Dans votre navigateur, choisissez le menu Édition > Préférences.
+Cliquez sur Sécurité.
+Cliquez sur Afficher les cookies.
+Google Chrome
+Cliquez sur l'icône du menu Outils.
+Sélectionnez Paramètres.
+Cliquez sur l'onglet Paramètresavancées et accédez à la section Confidentialité et Sécurité.
+Cliquez sur le bouton Paramètres du contenu puis sur Cookies.
+Dispositions finales
+Les présentes CGU sont soumises et interprétées conformément au droit français. Tout litige persistant relatif à l’interprétation, l’application ou l’exécution des présentes CGU qui ne serait pas réglé de manière transactionnelle dans un délai de 30 (trente) jours suivant la notification du litige par lettre recommandée avec accusé de réception, sera soumis à la compétence exclusive des tribunaux de Nanterre (France).Si une partie quelconque des dispositions des présentes CGU devait s'avérer illégale, invalide ou inapplicable pour quelque raison que ce soit, le terme ou les termes en question seraient déclarés nuls et les termes restants garderaient toute leur force et leur portée et continueraient à être applicables.
+La non-application ou l'absence de revendication de l'application par Update de l'une quelconque des dispositions des présentes CGU ne saurait en aucun cas être interprétée comme une renonciation par Update à une telle disposition ou un tel droit, à moins que Update n'en convienne autrement par écrit.
+</p>{% endtrans %}
+  
 {% endblock %}

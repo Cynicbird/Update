@@ -11,6 +11,9 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @UniqueEntity("email")
  */
 class User implements UserInterface, \Serializable{
+class User 
+{
+    
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -36,6 +39,21 @@ class User implements UserInterface, \Serializable{
     /**
      * @ORM\Column(type="string", length=100)
      */
+      private $password;
+      
+        /**
+     * @ORM\ManyToOne(targetEntity="Bookmark")
+     */
+      private $bookmark;
+      function getBookmark() {
+          return $this->bookmark;
+      }
+
+      function setBookmark($bookmark) {
+          $this->bookmark = $bookmark;
+      }
+
+          function getUsername() {
     private $password;
 
     function getId() {

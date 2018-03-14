@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+                   <trans-unit id="1">
+                <source>Legal notice</source>
+                <target>Правна информация</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>About us</source>
+                <target>за нас</target>
+            </trans-unit>
+<trans-unit id="3">
+                <source>Terms of use</source>
+                <target>Условия за ползване</target>
+            </trans-unit>
+<trans-unit id="4">
+                <source>Questions</source>
+                <target>въпроси</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>International</source>
+                <target>международен</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>Politics</source>
+                <target>Политиката</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>Society</source>
+                <target>общество</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>Sports</source>
+                <target>спортен</target>
+            </trans-unit>
+             <trans-unit id="9">
+                <source>Culture</source>
+                <target>култура</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
+
