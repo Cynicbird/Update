@@ -31,7 +31,8 @@ class UserType extends AbstractType
                 ]
             ])
             ->add('birthdate', DateType::class, [
-                'years' => range(1900, 2018)
+                'years' => range(1900, 2018),
+                'format' => 'MM-dd-yyyy',
             ])
             ->add('Sign Up', SubmitType::class)
         ;
