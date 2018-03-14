@@ -1,0 +1,40 @@
+aside, main{
+	display:inline-block;
+	vertical-align:top;
+	text-align:center;
+	
+	border-left:1px solid lightgrey;
+}
+
+/*-----ASIDE-----*/
+aside{
+	width:27%;
+	padding:11px 0;
+}
+
+aside div{
+		/*FONT STYLE*/
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size:14px;
+	color:#25BFCE;
+	
+	display:inline-block;
+	padding:4px 13px;
+	border-bottom:3px solid #25BFCE;
+	margin-bottom:20px;
+}
+
+/*-----ARTICLE-----*/
+aside article{
+	margin:10px 15px;
+	text-align:left;
+	
+	border:1px solid blue;
+}
+
+aside article img{
+	height:50px;
+	vertical-align:top;
+	margin-right:10px;
+}

@@ -1,0 +1,35 @@
+header{
+	border-bottom:2px solid lightgrey;
+	text-align:center;
+	padding:5px;
+     
+}
+/*-----LOGO-----*/
+header img{
+	height:60px;
+	margin-top:8px;
+	display:inline-block;
+}
+
+/*-----RIGHT LOGOS-----*/
+header ul{
+	position:absolute;
+	top:0; right:5%;
+	padding:0;
+}
+
+header ul li{
+		/*LIST STYLE*/
+	display:inline-block;
+	list-style:none;
+	padding:0;
+		/*ESPACEMENT*/
+	margin:0 12px;
+	font-size:10px;
+}
+
+header ul li img{
+	margin-top:0;
+	height:45px;
+	padding-bottom:5px;
+}

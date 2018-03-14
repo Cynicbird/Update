@@ -30,7 +30,7 @@ class News
     private $title;
     
           /**
-     * @ORM\Column(type="string", length=255, length=255, nullable=true))
+     * @ORM\Column(type="string", nullable=true)
      */
     private $summary;
     
@@ -44,7 +44,7 @@ class News
      */
     private $articleURL;
     /**
-     *@ORM\Column(type="datetime") 
+     *@ORM\Column(type="datetime", nullable=true) 
      */
     private $releaseTime;
     
@@ -59,6 +59,22 @@ class News
      */
     private $category;
     
+    /**
+     * 
+     * @ORM\OneToMany(targetEntity="Comments", mappedBy="news")
+     */
+
+        private $comment;
+    
+        
+    function getComment() {
+        return $this->comment;
+    }
+
+    function setComment($comment) {
+        $this->comment = $comment;
+    }    
+        
     function getTitle() {
         return $this->title;
     }

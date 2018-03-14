@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello !{% endblock %}
+{% block stylesheets %}
+                       <link rel="stylesheet" href="{{ asset('build/css/app.css')}}">
+        {% endblock %}
+{% block body %}
+            <main>
+	<nav>
+		<ul>
+			<li><a href="{{ path('test', {'variable': "International"}) }}">International</a></li>
+			<li><a href="{{ path('test', {'variable': "Politics"}) }}">Politics</a></li>
+			<li><a href="{{ path('test', {'variable': "Society"}) }}">Society</a></li>
+			<li><a href="{{ path('test', {'variable':  "Sports"})}}">Sports</a></li>
+			<li><a href="{{ path('test', {'variable':" Sports"}) }}">Culture</a></li>
+		</ul>
+	</nav>
+           <article>
+
+</main>
+        {% endblock %}

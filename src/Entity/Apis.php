@@ -30,6 +30,10 @@ class Apis
      */
     private $type;
     
+           /**
+     * @ORM\ManyToOne(targetEntity="News")
+     */
+    private $news;
     
     function getName() {
         return $this->name;

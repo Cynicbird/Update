@@ -1,0 +1,48 @@
+main{
+	width:72%;
+}
+ul li{
+		/*LIST STYLE*/
+	display:inline-block;
+	list-style:none;
+	padding:0;
+}
+
+
+/*-----NAVBAR-----*/
+main nav{
+	padding:7px 0;
+}
+nav ul li{
+		/*FONT STYLE*/
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size:14px;
+	
+	margin:0 1.2%;
+}
+
+nav a{
+	color:#25BFCE;
+	padding:4px 13px;
+}
+nav a:hover{
+	border-bottom:3px solid #25BFCE;
+}
+
+/*-----NEWS SITES-----*/
+main section{
+	padding:5px 10px;
+}
+main section ul li{
+	margin:5px 5%;
+}
+main section ul li img{
+	height:30px;
+}
+
+/*-----ARTICLE-----*/
+main article img{
+	margin:10px 0;
+	height:300px;
+}

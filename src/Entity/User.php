@@ -30,8 +30,19 @@ class User
      */
       private $password;
       
-      
-    function getUsername() {
+        /**
+     * @ORM\ManyToOne(targetEntity="Bookmark")
+     */
+      private $bookmark;
+      function getBookmark() {
+          return $this->bookmark;
+      }
+
+      function setBookmark($bookmark) {
+          $this->bookmark = $bookmark;
+      }
+
+          function getUsername() {
         return $this->username;
     }
 
