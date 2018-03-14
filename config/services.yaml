@@ -4,6 +4,21 @@ parameters:
     locale: 'en'
 
 services:
+    update.authentication.success_handler:
+      class: App\Security\AuthenticationSuccessHandler
+      arguments:
+        - "@security.http_utils"
+        - []
+        - "@session.flash_bag"
+
+    update.authentication_failure_handler:
+       class: App\Security\AuthenticationFailedHandler
+       arguments:
+         - "@http_kernel"
+         - "@security.http_utils"
+         - []
+         - "@logger"
+
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.

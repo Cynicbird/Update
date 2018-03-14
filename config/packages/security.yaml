@@ -42,6 +42,8 @@ security:
             form_login:
                 login_path: login
                 check_path: login
+                success_handler: update.authentication.success_handler
+                failure_handler: update.authentication_failure_handler
             logout: true
 
 

@@ -26,6 +26,11 @@ class User implements UserInterface, \Serializable{
      */
     private $email;
 
+    /**
+     *@ORM\Column(type="datetime", nullable=true)
+     */
+    private $birthdate;
+
     private $plainPassword;
 
     /**
@@ -60,6 +65,23 @@ class User implements UserInterface, \Serializable{
     function setPassword($password) {
         $this->password = $password;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getBirthdate()
+    {
+        return $this->birthdate;
+    }
+
+    /**
+     * @param mixed $birthdate
+     */
+    public function setBirthdate($birthdate): void
+    {
+        $this->birthdate = $birthdate;
+    }
+
 
     /**
      * @return mixed

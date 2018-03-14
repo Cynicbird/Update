@@ -22,8 +22,8 @@ class News
      */
     private $title;
     
-          /**
-     * @ORM\Column(type="string", length=255, length=255, nullable=true))
+    /**
+     * @ORM\Column(type="string", length=500, nullable=true)
      */
     private $summary;
     
@@ -32,12 +32,12 @@ class News
      */
     private  $srcImageFile;
     
-          /**
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $articleURL;
     /**
-     *@ORM\Column(type="datetime") 
+     *@ORM\Column(type="datetime")
      */
     private $releaseTime;
     

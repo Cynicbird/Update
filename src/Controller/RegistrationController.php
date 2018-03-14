@@ -24,6 +24,7 @@ class RegistrationController extends Controller
             'registration_form' => $form->createView(),
         ]);
     }
+
     /**
      * @param Request $request
      * @Route("/registration-form-submission", name="handle_registration_form_submission")
@@ -64,6 +65,7 @@ class RegistrationController extends Controller
 
         return $this->redirectToRoute('homepage');
     }
+
     /**
      * @param $user
      * @return \Symfony\Component\Form\Form

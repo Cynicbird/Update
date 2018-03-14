@@ -16,7 +16,7 @@
     <body>
 
         <div class = "container">
-
+            {%  include('flash-messages.html.twig') %}
             {% if app.user %}
                 <a href="{{ path('logout') }}">LOGOUT</a>
             {% endif %}
