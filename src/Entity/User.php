@@ -4,9 +4,11 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping AS ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @UniqueEntity("email")
  */
 class User implements UserInterface, \Serializable{
     /**
@@ -85,21 +87,23 @@ class User implements UserInterface, \Serializable{
      */
     public function serialize()
     {
-        // TODO: Implement serialize() method.
+        return serialize(array(
+            $this->id,
+            $this->username,
+            $this->password,
+            $this->email,
+        ));
     }
 
-    /**
-     * Constructs the object
-     * @link http://php.net/manual/en/serializable.unserialize.php
-     * @param string $serialized <p>
-     * The string representation of the object.
-     * </p>
-     * @return void
-     * @since 5.1.0
-     */
+    /** @see \Serializable::unserialize() */
     public function unserialize($serialized)
     {
-        // TODO: Implement unserialize() method.
+        list (
+            $this->id,
+            $this->username,
+            $this->password,
+            $this->email,
+            ) = unserialize($serialized);
     }
 
     /**
@@ -120,7 +124,9 @@ class User implements UserInterface, \Serializable{
      */
     public function getRoles()
     {
-        // TODO: Implement getRoles() method.
+        return [
+          'ROLE_USER',
+        ];
     }
 
     /**
@@ -132,7 +138,7 @@ class User implements UserInterface, \Serializable{
      */
     public function getSalt()
     {
-        // TODO: Implement getSalt() method.
+        return null; // bcrypt used
     }
 
     /**
@@ -143,6 +149,6 @@ class User implements UserInterface, \Serializable{
      */
     public function eraseCredentials()
     {
-        // TODO: Implement eraseCredentials() method.
+        $this->plainPassword = null; // prevent leak
     }
 }
