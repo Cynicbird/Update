@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 namespace App\Entity;
 
@@ -10,10 +10,9 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @UniqueEntity("email")
  */
-class User implements UserInterface, \Serializable{
-class User 
+class User implements UserInterface, \Serializable
 {
-    
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -39,27 +38,26 @@ class User
     /**
      * @ORM\Column(type="string", length=100)
      */
-      private $password;
-      
-        /**
+    private $password;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Bookmark")
      */
-      private $bookmark;
-      function getBookmark() {
-          return $this->bookmark;
-      }
+    private $bookmark;
 
-      function setBookmark($bookmark) {
-          $this->bookmark = $bookmark;
-      }
+    function getBookmark() {
+        return $this->bookmark;
+    }
 
-          function getUsername() {
-    private $password;
+    function setBookmark($bookmark) {
+        $this->bookmark = $bookmark;
+    }
+
 
     function getId() {
         return $this->id;
     }
-      
+
     function getUsername() {
         return $this->username;
     }
@@ -165,7 +163,7 @@ class User
     public function getRoles()
     {
         return [
-          'ROLE_USER',
+            'ROLE_USER',
         ];
     }
 

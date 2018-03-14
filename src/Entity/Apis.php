@@ -16,25 +16,25 @@ class Apis
      * @ORM\Column(type="integer")
      */
     private $Id;
-    
-         /**
+
+    /**
      * @ORM\Column(type="string", length=100)
      */
     private $name;
-          /**
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $url;
-        /**
+    /**
      * @ORM\Column(type="string", length=25)
      */
     private $type;
-    
-           /**
+
+    /**
      * @ORM\ManyToOne(targetEntity="News")
      */
     private $news;
-    
+
     function getName() {
         return $this->name;
     }
@@ -45,8 +45,8 @@ class Apis
 
     function getType() {
         return $this->type;
-    }    
- 
+    }
+
 
 
     function setName($name) {
@@ -61,5 +61,4 @@ class Apis
         $this->type = $type;
     }
 
-        // add your own fields
 }

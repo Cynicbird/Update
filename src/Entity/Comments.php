@@ -16,60 +16,56 @@ class Comments
      * @ORM\Column(type="integer")
      */
     private $id;
-    
-    
-     /**
+
+
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $name;
-    
-    
-       /**
+
+
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $descrption;
-    
-    
-    
-    
- /**
+
+
+
+
+    /**
      * @Column(type="datetime", options={"default"="CURRENT_TIMESTAMP"})
      */
-  protected $created_on;
-    
-    
-    
-  function getName() {
-      return $this->name;
-  }
+    protected $created_on;
 
-  function getDescrption() {
-      return $this->descrption;
-  }
 
-  function getCreated_on() {
-      return $this->created_on;
-  }
 
-  function setName($name) {
-      $this->name = $name;
-  }
+    function getName() {
+        return $this->name;
+    }
 
-  function setDescrption($descrption) {
-      $this->descrption = $descrption;
-  }
+    function getDescrption() {
+        return $this->descrption;
+    }
 
-  function setCreated_on($created_on) {
-      $this->created_on = $created_on;
-  }
+    function getCreated_on() {
+        return $this->created_on;
+    }
 
-   /**
+    function setName($name) {
+        $this->name = $name;
+    }
+
+    function setDescrption($descrption) {
+        $this->descrption = $descrption;
+    }
+
+    function setCreated_on($created_on) {
+        $this->created_on = $created_on;
+    }
+
+    /**
      * @ORM\ManyToOne(targetEntity="User")
      */
     private $user;
-    
-    
-    
 
-    // add your own fields
 }

@@ -17,20 +17,20 @@ class Bookmark
     private $id;
 
     // add your own fields
-    
-        /**
+
+    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $name;
-    
-       /**
+
+    /**
      * @ORM\ManyToOne(targetEntity="News")
      */
 
-        private $news;
-        
-        
-        function getName() {
+    private $news;
+
+
+    function getName() {
         return $this->name;
     }
 

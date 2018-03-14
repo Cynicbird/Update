@@ -10,6 +10,30 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Category
 {
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(name="name",type="string", length=255)
+     */
+    private $name;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Apis")
+     */
+    private $api;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="News")
+     */
+    private $news;
+
     function getName() {
         return $this->name;
     }
@@ -30,40 +54,14 @@ class Category
         $this->api = $api;
     }
     function setNews($news) {
-     $this->news = $news;
+        $this->news = $news;
     }
 
-
-        /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
-        
-     /**
-     * @ORM\Column(name="name",type="string", length=255)
-     */
-    private $name;
-    
-        
-       /**
-     * @ORM\ManyToOne(targetEntity="Apis")
-     */
-    private $api;
-    
-    
-       /**
-     * @ORM\ManyToOne(targetEntity="News")
-     */
-    private $news;
-   
-
-           function getTitle() {
+    function getTitle() {
         return $this->name;
-        
+
     }
 
-    
+
 
 }
