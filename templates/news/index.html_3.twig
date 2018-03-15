@@ -9,8 +9,8 @@
 				<li><a href="{{ path('test', {'variable': "International"}) }}">International</a></li>
 				<li><a href="{{ path('test', {'variable': "Politics"}) }}">Politics</a></li>
 				<li><a href="{{ path('test', {'variable': "Society"}) }}">Society</a></li>
-				<li><a href="{{ path('test', {'variable': }) "Sports"}}">Sports</a></li>
-				<li><a href="{{ path('test', {'variable':" Sports"}) }}">Culture</a></li>
+				<li><a href="{{ path('test', {'variable': "Sports"})}}">Sport</a></li>
+				<li><a href="{{ path('test', {'variable':   "Cultue"}) }}">Culture</a></li>
 			</ul>
 		</nav>
 		<article>
@@ -20,7 +20,7 @@
 					<li><a href="#"><img src={{ asset('build/img/news/ESPN.png')}}/></a></li>
 					<li><a href="#"><img src={{ asset('build/img/news/Sky-Sports.png')}}/></a></li>
 				</ul>
-				<article><a href="#"><img src={{ asset('build/img/art/01.jpg')}}/></a></article>
+				<article><a href="{{news.articleURL}}"><img src={{news.srcImageFile}}/></a></article>
 			</section>
 		</article>
 	</main>
@@ -31,7 +31,7 @@
 
 
 			<article>
-				<img src="{{news.srcImageFile}}" height="100" width="300" />
+                            <a href="{{news.articleURL}}"><img src="{{news.srcImageFile}}" height="100" width="300" /></a>
 				<a href="{{news.articleURL}}">{{news.title}}</a>
 			</article>
         {% endfor %}

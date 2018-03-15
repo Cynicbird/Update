@@ -9,11 +9,9 @@ use DateTime;
 use SplStack;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Translation\TranslatorInterface;
-use Twig\Template;
-use Unirest\Method;
 use Unirest\Request;
 use Unirest\Request\Body;
+use function dump;
 class NewsController extends Controller {
 
     /**
@@ -46,7 +44,7 @@ class NewsController extends Controller {
      * @Route("  /{_locale}/news", name="homepage")
      */
     public function checkData(){
-
+           $hey =$this->Newnews();
         $news=$this->getNews();
         return $this->render('news/index.html_2.twig',['news'=>$news
         ]);
@@ -131,16 +129,20 @@ class NewsController extends Controller {
      * @Route("/{_locale}/news/{variable}", defaults={"variable" = 1}, name="test")
      */
     public function Category($variable){
-        $repository = $this->getDoctrine()->getRepository(News::class);
-        $product = $repository->findOneBy(['title' => $variable]);
-        return $this->render('news/category.html.twig',['news'=>$product
+        
+        $repository = $this->getDoctrine()->getRepository(Apis::class);
+        $product = $repository->findOneBy(['type' => $variable]);
+   $cat=$product->getUrl();
+   
+    $Data=$this->Parnoms($cat);
+      for($i=0;$i<count($Data['body']['articles']);$i++) {
+            
+                  return $this->render('news/category.html.twig',['news'=>$Data['body']['articles'][$i]['url'],
         ]);
 
-
-        dump($product);
-
     }
-
+    }
+    
 
 
 
@@ -223,8 +225,7 @@ class NewsController extends Controller {
 
 
     public function Newnews(){
-        $category = new Category();
-        $category ->setName("Sport");
+    
         $Url=$this->getApisname();
         foreach ($Url as $key =>  $value){
             $g=$key;
@@ -249,9 +250,7 @@ class NewsController extends Controller {
                     $piece = preg_split("( T | Z )", $Data['body']['articles'][$i]['publishedAt']);
                     $time = new DateTime($piece[0]);
                     $news->setReleaseTime($time);
-                    $category->getNews($news);
                     $entityManager->persist($news);
-                    $entityManager->persist($category);
                 }
             }
 
@@ -260,4 +259,44 @@ class NewsController extends Controller {
     }
 
 
-}
+    public function Parnoms($idurl) {
+      
+        $data = array('author' => 'author');
+        $body = Body::json($data);
+        $headers = array('Accept' => 'application/json');
+        $response = Request::get($idurl, $headers, $body);
+        $response->body;
+        $response=json_encode($response);
+        $response=   json_decode($response,true);
+        // $hey = $response['body']['articles'][0]['description'];
+          
+        return $response;
+    }
+
+
+  public function Newnews2($name){
+
+            $Data= $this->Parnoms();
+
+            for($i=0;$i<count($Data['body']['articles']);$i++) {
+
+                $Data= $this->getDataApi($g);
+
+
+
+                    $news = new News();
+                    $news->setTitle($Data['body']['articles'][$i]['title']);
+                    $news->setSummary($Data['body']['articles'][$i]['description']);
+                    $news->setSrcImageFile($Data['body']['articles'][$i]['urlToImage']);
+                    $news->setArticleURL($Data['body']['articles'][$i]['url']);
+                    $piece = preg_split("( T | Z )", $Data['body']['articles'][$i]['publishedAt']);
+                    $time = new DateTime($piece[0]);
+                    $news->setReleaseTime($time);
+                
+                }
+            }
+
+        }
+    
+
+

@@ -31,12 +31,16 @@
                 <target>общество</target>
             </trans-unit>
             <trans-unit id="8">
-                <source>Sports</source>
+                <source>Sport</source>
                 <target>спортен</target>
             </trans-unit>
              <trans-unit id="9">
                 <source>Culture</source>
                 <target>култура</target>
+            </trans-unit>
+             <trans-unit id="10">
+                <source>Trending now</source>
+                <target>Време</target>
             </trans-unit>
         </body>
     </file>

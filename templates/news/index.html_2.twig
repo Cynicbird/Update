@@ -9,18 +9,18 @@
 				<li><a href="{{ path('test', {'variable': "International"}) }}">{{ 'International'| trans }}</a></li>
 				<li><a href="{{ path('test', {'variable': "Politics"}) }}">{{ 'Politics'| trans }}</a></li>
 				<li><a href="{{ path('test', {'variable': "Society"}) }}">{{ 'Society'| trans }}</a></li>
-				<li><a href="{{ path('test', {'variable':  "Sports"})}}">{{ 'Sports'|trans }}</a></li>
-				<li><a href="{{ path('test', {'variable':" Sports"}) }}">{{ 'Culture'|trans }}</a></li>
+				<li><a href="{{ path('test', {'variable':  "Sport"})}}">{{ 'Sport'|trans }}</a></li>
+				<li><a href="{{ path('test', {'variable':"Culture"}) }}">{{ 'Culture'|trans }}</a></li>
 			</ul>
 		</nav>
 		<article>
 			<section>
 				<ul>
-					<li><a href="#"><img src={{ asset('build/img/news/CBS.png')}}/></a></li>
-					<li><a href="#"><img src={{ asset('build/img/news/ESPN.png')}}/></a></li>
-					<li><a href="#"><img src={{ asset('build/img/news/Sky-Sports.png')}}/></a></li>
+					<li><a href="https://www.cbs.com/"><img src={{ asset('build/img/news/CBS.png')}}/></a></li>
+					<li><a href="http://www.espn.com/"><img src={{ asset('build/img/news/ESPN.png')}}/></a></li>
+					<li><a href="http://www.skysports.com/"><img src={{ asset('build/img/news/Sky-Sports.png')}}/></a></li>
 				</ul>
-				<article><a href="#"><img src={{ asset('build/img/art/01.jpg')}}/></a></article>
+				<article><a href="http://www.beinsports.com/france/nba/?gr=www"><img src={{ asset('build/img/art/01.jpg')}}/></a></article>
 			</section>
 		</article>
 	</main>
@@ -30,7 +30,7 @@
         {% for news in news | slice (1, 6) %}
 
 			<article>
-				<img src="{{news.srcImageFile}}" height="100" width="300" />
+				<a href="{{news.articleURL}}"><img src="{{news.srcImageFile}}" height="100" width="300" /></a>
 				<a href="{{news.articleURL}}">{{news.title}}</a>
 			</article>
         {% endfor %}

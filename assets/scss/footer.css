@@ -2,7 +2,7 @@
 
 footer{	
 	/*POSITION*/
-	position:absolute;
+	position: sticky;
 	bottom:0;
 	text-align:center;
 	
@@ -10,8 +10,9 @@ footer{
 	width:100%;
 	
 	/*COLORS*/
-	background-color:#111;
+	background-color:#eee;
 	color:#999;
+        
 }
 
 footer ul, footer ul li{

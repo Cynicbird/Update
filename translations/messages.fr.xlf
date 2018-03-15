@@ -3,7 +3,7 @@
     <file source-language="en" datatype="plaintext" original="file.ext">
         <body>
                    <trans-unit id="1">
-                <source>Legal notice</source>
+                <source>Legal notice'</source>
                 <target>Notice legal</target>
             </trans-unit>
             <trans-unit id="2">
@@ -31,12 +31,16 @@
                 <target>Société</target>
             </trans-unit>
             <trans-unit id="8">
-                <source>Sports</source>
-                <target>Sports</target>
+                <source>Sport</source>
+                <target>Sport</target>
             </trans-unit>
              <trans-unit id="9">
                 <source>Culture</source>
                 <target>Culture</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>Trending now</source>
+                <target>En ce moment</target>
             </trans-unit>
         </body>
     </file>
