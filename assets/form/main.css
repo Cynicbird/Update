@@ -1,0 +1,63 @@
+main{
+	width:100%;
+	height:100%;
+	background-color:#25BFCE;
+	text-align:center;
+}
+
+main section{
+		/*BLOCK*/
+	display:inline-block;
+	text-align:center;
+	padding:10px;
+	border-radius:10px;
+	width:30%;
+	min-width:250px;
+	
+		/*VERTICAL ALIGN*/
+	/*position:relative;
+	top:50%;
+	-webkit-transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	transform:translateY(50%);*/
+	
+		/*COLORS*/
+	background-color:rgba(255, 255, 255, 0.6);
+}
+
+/*-----IMAGES-----*/
+main img{
+	height:75px;
+	margin:5% 0;
+}
+figure img{
+	height:50px;
+	margin:0 9%;
+}
+
+/*-----FORM STYLE-----*/
+input{
+	width:90%;
+	font-size:10px;
+	text-align:center;
+	border:none;
+	margin:7px 5px;
+	padding:10px;
+}
+	/*SUBMIT BUTTON*/
+input[type=submit]{
+	font-size:11px;
+	font-weight:bold;
+	color:white;
+	background-color:#25BFCE;
+}
+input[type=submit]:hover{
+	background-color:#777;
+}
+
+	/*ALREADY ?*/
+section a{
+	color:grey;
+	text-align:right;
+}
+

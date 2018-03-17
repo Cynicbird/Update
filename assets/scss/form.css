@@ -1,0 +1,70 @@
+body{
+	background-color:#25BFCE;
+	color:white;
+	text-align:center;
+}
+form{
+	display:inline-block;
+	padding:20px 10px;
+		/*POSITION*/
+	margin-top:120px;
+	text-align:center;
+		/*TAILLE*/
+	width:50%;
+	max-width:350px;
+		/*BG*/
+	background-color:rgba(255, 255, 255, 0.35);
+	border-radius:10px;
+}
+/*-----INPUT-----*/
+input{
+	font-size:12px;
+	margin:0 0 15px 0;
+}
+
+/*-----BUTTON SUBMIT-----*/
+button{
+		/*POSITION*/
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+		/*STYLE*/
+	font-size:11px;
+	font-weight:bold;
+	color:white;
+	background-color:#25BFCE;
+		/*INPUT IMPORT*/
+	width:90%;
+	border:none;
+	padding:10px;
+}
+button:hover{
+	background-color:#777;
+	
+}
+
+/*-----SIGN UP-----*/
+a{
+	display:block;
+	margin:10px;
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	color:grey;
+	text-align:right;
+}
+
+/*-----CHEBOX*-----*/
+input[type=checkbox]{
+	margin-left:25px;
+	margin-bottom:0;
+	width:auto;
+	display:inline-block;
+}
+label[for=remember_me]{
+	vertical-align:top;
+}
+/*-----TITLE------*/
+h2{
+	font-size:22px;
+}

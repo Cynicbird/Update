@@ -30,8 +30,8 @@
         {% for news in news | slice (1, 6) %}
 
 			<article>
-				<a href="{{news.articleURL}}"><img src="{{news.srcImageFile}}" height="100" width="300" /></a>
-				<a href="{{news.articleURL}}">{{news.title}}</a>
+				<a href="{{news.articleURL}}"><<img src="{{news.srcImageFile}}" width="250" height="110" /></a>
+                                <p>{{news.title}}</p></a>
 			</article>
         {% endfor %}
 

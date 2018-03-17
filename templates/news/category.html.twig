@@ -3,9 +3,12 @@
 {% block title %}Hello !{% endblock %}
 {% block stylesheets %}
                        <link rel="stylesheet" href="{{ asset('build/css/app.css')}}">
+                       <style>#chips {margin-left:auto;margin-right:auto; 
+                           width:600px;
+                           text-align:center;}</style>
         {% endblock %}
 {% block body %}
-      <p>{{news}}<p/>
+
             <main>
 	<nav>
 		<ul>    
@@ -19,4 +22,12 @@
            <article>
 
 </main>
+                <div id="chips">
+                    {% for news in news | slice (1, 7) %}
+                     	<article>
+                            <a href="{{news.url}}"><img src="{{news.urlToImage}}" /></a>
+				<p>{{news.title}}</p></a>
+			</article>
+             {%endfor%}
+                 </div>
         {% endblock %}

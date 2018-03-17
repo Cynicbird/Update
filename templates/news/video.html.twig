@@ -1,0 +1,30 @@
+<html lang="en">
+    
+<head>
+	<title>Update</title>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href={{ asset('build/video/general.css')}}/>
+	<link rel="stylesheet" href={{ asset('/build/video/main.css')}}/>
+</head>
+<body>
+	<main>
+   <a href={{path("video")}}>     <img src={{ asset('build/img/logo3.png')}}/></a>
+	<section class="vid">
+		<h3>What's Up'Date ?</h3>
+           
+                    <video width="260" controls="controls" preload="auto" >
+<source src="{{ asset('build/video/Update.mp4')}}" type="video/mp4" />
+                </video>
+	</section>
+	<section class="pr">
+		<h3>Press Review</h3>
+		<p>txt</p>
+	</section>
+	<div class="codeco">
+		<b><a href="{{path("registration")}}">Sign up</a> / <a href="{{path("login")}}">Log in</a></b>
+	</div>
+</main>
+</body>
+
+
+

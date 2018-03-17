@@ -14,10 +14,19 @@ Encore
     .addStyleEntry('css/app', './assets/scss/app.scss')
     // uncomment if you use Sass/SCSS files
     .enableSassLoader()
-    .addPlugin(new CopyWebpackPlugin([
+ .addPlugin(new CopyWebpackPlugin([
         // copies to {output}/static
         { from: './assets/img', to: 'img' }
-    ]))
+]))
+ .addPlugin(new CopyWebpackPlugin([
+        // copies to {output}/static
+        { from: './assets/video', to: 'video' }
+]))
+ .addPlugin(new CopyWebpackPlugin([
+        // copies to {output}/static
+        { from: './assets/form', to: 'form' }
+]))
+
 // uncomment for legacy applications that require $/jQuery as a global variable
 // .autoProvidejQuery()
 ;

@@ -44,7 +44,7 @@ class NewsController extends Controller {
      * @Route("  /{_locale}/news", name="homepage")
      */
     public function checkData(){
-           $hey =$this->Newnews();
+    
         $news=$this->getNews();
         return $this->render('news/index.html_2.twig',['news'=>$news
         ]);
@@ -90,6 +90,17 @@ class NewsController extends Controller {
         return $this->render('news/index.html.twig');
 
     }
+    
+  /**
+     * @Route("  /{_locale}/news/video", name="video")
+     */
+    public function Video (){
+
+        return $this->render('news/video.html.twig');
+
+    }
+
+
 
 
 
@@ -133,14 +144,13 @@ class NewsController extends Controller {
         $repository = $this->getDoctrine()->getRepository(Apis::class);
         $product = $repository->findOneBy(['type' => $variable]);
    $cat=$product->getUrl();
-   
-    $Data=$this->Parnoms($cat);
-      for($i=0;$i<count($Data['body']['articles']);$i++) {
-            
-                  return $this->render('news/category.html.twig',['news'=>$Data['body']['articles'][$i]['url'],
+ $Data=$this->Parnoms($cat);
+
+          
+                  return $this->render('news/category.html.twig',['news'=>$Data['body']['articles'],
         ]);
 
-    }
+    
     }
     
 
@@ -269,7 +279,6 @@ class NewsController extends Controller {
         $response=json_encode($response);
         $response=   json_decode($response,true);
         // $hey = $response['body']['articles'][0]['description'];
-          
         return $response;
     }
 
