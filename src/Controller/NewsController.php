@@ -44,7 +44,7 @@ class NewsController extends Controller {
      * @Route("  /{_locale}/news", name="homepage")
      */
     public function checkData(){
-    
+        $news=$this->Newnews();
         $news=$this->getNews();
         return $this->render('news/index.html_2.twig',['news'=>$news
         ]);
